@@ -72,13 +72,13 @@ const photoStacks = [
   // Stack 4: MX5_nb (Majuscules importantes)
   { 
     title: "MX5 NB", 
-    images: getImages("MX5_nb", 4) 
+    images: getImages("mx5nb", 4) 
   },
 
   // Stack 5: Opel_Corsa (Majuscules importantes)
   { 
     title: "Opel Corsa", 
-    images: getImages("Opel_Corsa", 7) 
+    images: getImages("opelcorsa", 7) 
   },
 
   // ... (la suite est ok) ...
