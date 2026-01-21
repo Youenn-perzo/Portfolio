@@ -31,98 +31,95 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // --- DONNÉES PHOTOS ---
 
-// --- DONNÉES PHOTOS ---
-
-// Petite fonction pour générer les liens
-function getImages(folder, count, ext) {
+// Fonction simplifiée : tout est maintenant en .webp
+function getImages(folder, count) {
   let images = [];
   for (let i = 1; i <= count; i++) {
-    images.push(`./images/${folder}/${i}.${ext}`);
+    images.push(`./images/${folder}/${i}.webp`);
   }
   return images;
 }
 
 const photoStacks = [
-  // === LES NOUVELLES COLLECTIONS ===
+  // === LES NOUVELLES COLLECTIONS (Ordre identique au HTML) ===
   
-  // Stack 0: Stretching Paris (WEBP)
+  // Stack 0
   { 
     title: "Stretching Paris", 
-    images: getImages("Stretching_paris", 11, "WEBP") 
+    images: getImages("Stretching_paris", 11) 
   },
   
-  // Stack 1: Bloom in Rennes (WEBP)
+  // Stack 1
   { 
     title: "Bloom in Rennes", 
-    images: getImages("Bloom_in_rennes", 13, "webp") 
+    images: getImages("Bloom_in_rennes", 13) 
   },
 
-  // Stack 2: Supra (PNG)
+  // Stack 2
   { 
     title: "Supra", 
-    images: getImages("Supra", 6, "png") 
+    images: getImages("Supra", 6) 
   },
 
-  // Stack 3: 103 (PNG)
+  // Stack 3
   { 
     title: "Peugeot 103", 
-    images: getImages("103", 9, "png") 
+    images: getImages("103", 9) 
   },
 
-  // Stack 4: Mx5_nb (JPG)
+  // Stack 4
   { 
     title: "MX5 NB", 
-    images: getImages("Mx5_nb", 4, "jpg") 
+    images: getImages("Mx5_nb", 4) 
   },
 
-  // Stack 5: Opel Corsa (WEBP)
+  // Stack 5
   { 
     title: "Opel Corsa", 
-    images: getImages("Opel_corsa", 7, "webp") 
+    images: getImages("Opel_corsa", 7) 
   },
 
-  // Stack 6: Enora (PNG)
+  // Stack 6
   { 
     title: "Enora", 
-    images: getImages("Enora", 5, "png") 
+    images: getImages("Enora", 5) 
   },
 
-  // === LES ANCIENNES COLLECTIONS (WEBP) ===
-  // (Je laisse celles-ci comme avant)
+  // === LES ANCIENNES COLLECTIONS (Déjà en webp) ===
 
   {
     title: "Drift spec miata",
-    images: ["./images/miata/7.webp", "./images/miata/2.webp", "./images/miata/3.webp", "./images/miata/4.webp", "./images/miata/5.webp", "./images/miata/6.webp", "./images/miata/1.webp"],
+    images: getImages("miata", 7) // J'ai utilisé la fonction ici aussi pour simplifier
   },
   {
     title: "Dream car",
-    images: ["./images/Dream_car/1.webp", "./images/Dream_car/2.webp", "./images/Dream_car/3.webp", "./images/Dream_car/4.webp", "./images/Dream_car/5.webp"],
+    images: getImages("Dream_car", 5)
   },
   {
     title: "Ford mustang",
-    images: ["./images/Ford_mustang/1.webp", "./images/Ford_mustang/2.webp", "./images/Ford_mustang/3.webp", "./images/Ford_mustang/4.webp", "./images/Ford_mustang/5.webp"],
+    images: getImages("Ford_mustang", 5)
   },
   {
     title: "HCS R34",
-    images: ["./images/r34/1.webp", "./images/r34/2.webp", "./images/r34/3.webp", "./images/r34/4.webp", "./images/r34/5.webp"],
+    images: getImages("r34", 5)
   },
   
-  // Ajoute tes doublons ici si tu les as gardés dans le HTML
+  // === DOUBLONS (Si tu les as gardés en bas du HTML) ===
   {
     title: "Drift spec miata",
-    images: ["./images/miata/7.webp", "./images/miata/2.webp", "./images/miata/3.webp", "./images/miata/4.webp", "./images/miata/5.webp", "./images/miata/6.webp", "./images/miata/1.webp"],
+    images: getImages("miata", 7)
   },
   {
     title: "Dream car",
-    images: ["./images/Dream_car/1.webp", "./images/Dream_car/2.webp", "./images/Dream_car/3.webp", "./images/Dream_car/4.webp", "./images/Dream_car/5.webp"],
+    images: getImages("Dream_car", 5)
   },
   {
     title: "Ford mustang",
-    images: ["./images/Ford_mustang/1.webp", "./images/Ford_mustang/2.webp", "./images/Ford_mustang/3.webp", "./images/Ford_mustang/4.webp", "./images/Ford_mustang/5.webp"],
+    images: getImages("Ford_mustang", 5)
   },
   {
     title: "HCS R34",
-    images: ["./images/r34/1.webp", "./images/r34/2.webp", "./images/r34/3.webp", "./images/r34/4.webp", "./images/r34/5.webp"],
+    images: getImages("r34", 5)
   },
 ]
 
