@@ -309,7 +309,9 @@ let videoIsPaused = false
 
 function animateVideoCarousel() {
   if (!videoIsPaused && videoTrack && videoCarousel) {
-    videoScrollPosition += 0.8
+    // CHANGE ICI : Remplace 0.8 par 1.5 (ou plus)
+    videoScrollPosition += 1.2
+    
     if (videoScrollPosition >= videoTrack.scrollWidth / 2) {
       videoScrollPosition = 0
     }
